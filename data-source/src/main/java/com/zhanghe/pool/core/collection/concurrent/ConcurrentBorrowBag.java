@@ -139,7 +139,15 @@ public class ConcurrentBorrowBag<T extends UseState> extends AbstractQueue<T> im
         return shareList.stream()
                 .filter(t -> t.compareSetState(UseState.UN_USE, UseState.USE))
                 .findAny()
-                .orElse(null)
+                .orElseGet(()->{
+                    List<T> list = local.get();
+                    for (int i = 0; i < list.size(); i++) {
+                        T item = list.remove(i);
+                        if(item.compareSetState(UseState.UN_USE,UseState.USE))
+                            return item;
+                    }
+                    return null;
+                })
                 ;
     }
 

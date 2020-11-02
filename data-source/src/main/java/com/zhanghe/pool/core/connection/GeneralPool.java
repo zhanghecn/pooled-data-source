@@ -225,9 +225,8 @@ public class GeneralPool<T> extends AbstractConnectionPool<T> {
 
     protected boolean validateConnection(T con, long timeout) throws TimeoutException {
         try {
-            FutureTask<Boolean> task = new FutureTask<>(() -> isConnectionAlive(con));
-            task.run();
-            return task.get(timeout, TimeUnit.MILLISECONDS);
+            return closeConnectionService.submit(() -> isConnectionAlive(con))
+                    .get(timeout, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             log.error("Verify that the connection is broken");
         } catch (ExecutionException e) {
