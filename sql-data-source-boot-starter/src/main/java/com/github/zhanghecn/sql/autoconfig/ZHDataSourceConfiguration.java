@@ -15,11 +15,16 @@ import javax.sql.DataSource;
  * @author: ZhangHe
  * @since: 2020/11/2 14:19
  */
-@Configuration(proxyBeanMethods = false)
+@Configuration
 @ConditionalOnMissingBean(DataSource.class)
 public class ZHDataSourceConfiguration {
+
+    /**
+     * 当存在 spring.datasource.type 并且设置了 ZHDataSource 数据源类型
+     * @param dataSourceProperties 获取datasource配置
+     * @return 返回 ZHDataSource 数据源
+     */
     @Bean
-    @ConfigurationProperties(prefix = "spring.datasource.zh")
     @ConditionalOnProperty(name = "spring.datasource.type", havingValue = "com.github.zhanghecn.sql.datasource.ZHDataSource",
             matchIfMissing = true)
     ZHDataSource dataSource(DataSourceProperties dataSourceProperties){

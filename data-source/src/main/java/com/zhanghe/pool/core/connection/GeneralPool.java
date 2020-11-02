@@ -23,7 +23,7 @@ import java.util.concurrent.*;
  * <p>
  * 标准的模板模式的设计思想
  * <p>
- * 连接池池的启发=>hikari 代码简单明了 而且速度极快 spring boot 数据库连接池自带的
+ * 连接池池的启发=hikari 代码简单明了 而且速度极快 spring boot 数据库连接池自带的
  * <p>
  * 运用了hikari 的部分核心思路
  *
@@ -105,6 +105,7 @@ public class GeneralPool<T> extends AbstractConnectionPool<T> {
      * 默认调度任务
      * 检查超出最小空闲连接的用来关闭
      * 保持最小空闲连接数
+     * @return 默认的调度任务
      */
     public Runnable defaultTimedTask() {
         return () -> {

@@ -9,6 +9,7 @@ public interface IDataSource<T> {
     /**
      * 获取连接
      * @return 连接
+     * @throws Exception exception
      */
     T getConnectionObject() throws Exception;
 }

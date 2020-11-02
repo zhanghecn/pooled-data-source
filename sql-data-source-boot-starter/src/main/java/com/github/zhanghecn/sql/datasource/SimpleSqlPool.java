@@ -37,7 +37,7 @@ public class SimpleSqlPool extends GeneralPool<Connection> {
     static final long DEFAULT_MAX_LIFETIME = TimeUnit.MINUTES.toMillis(30);
 
     //默认最小空闲连接
-    static final int DEFAULT_MIN_IDLE = 5;
+    static final int DEFAULT_MIN_IDLE = 20;
 
     static final String DEFAULT_POOL_NAME = "zh-pool";
 

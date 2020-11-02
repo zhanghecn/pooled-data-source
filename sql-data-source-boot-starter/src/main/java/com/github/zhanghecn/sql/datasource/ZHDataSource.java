@@ -3,6 +3,7 @@ package com.github.zhanghecn.sql.datasource;
 import com.zhanghe.pool.core.connection.ConnectionPool;
 import com.zhanghe.pool.core.datasource.DataSourceAdapter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -18,6 +19,7 @@ import java.util.logging.Logger;
  * @since: 2020/10/31 13:50
  */
 @Slf4j
+@ConfigurationProperties("spring.datasource.zh")
 public class ZHDataSource extends SQLDataSourceConfig implements DataSourceAdapter, AutoCloseable {
     private ConnectionPool connectionPool;
 

@@ -32,10 +32,7 @@ public abstract class ThreadHelp {
         return  getThreadFactory("zh-pool", false);
     }
 
-    /**
-     * 默认添加服务
-     * @return 任何添加连接任务的执行器
-     */
+
     public static ExecutorService singleCoreThreadPool(final BlockingQueue blockingQueue,final ThreadFactory threadFactory,final RejectedExecutionHandler policy) {
         //只有一个核心worker 线程执行  并且5秒中取不到任务就取消阻塞
         ThreadPoolExecutor executorService = new ThreadPoolExecutor(1,
