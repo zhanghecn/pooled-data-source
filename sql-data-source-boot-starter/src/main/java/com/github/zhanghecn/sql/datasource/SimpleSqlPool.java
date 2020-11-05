@@ -132,8 +132,15 @@ public class SimpleSqlPool extends GeneralPool<Connection> {
 
         void loadProperty() {
             this.userInfo = new Properties();
+
+            Properties other;
+            if((other = config.getProperties()) != null){
+                this.userInfo.putAll(other);
+            }
+
             this.userInfo.setProperty(USER, config.getUsername());
             this.userInfo.setProperty(PASSWORD, config.getPassword());
+
         }
 
         void loadDriver() {
