@@ -6,6 +6,7 @@
 #### 软件架构
 data-source-core 通用连接池架构 => 已经编写好的连接池模板 直接继承使用
 sql-data-source-boot-start sql类数据库 的连接池 整合spring boot 也算个经典实例，看看使用data-source-core 实现连接池有多简单
+ftp-data-source FTP连接池 整合spring boot 
 ##### data-source-core 
 ConcurrentBorrowBag implements BlockingQueue 
 里面存着连接池带 取出和放入 连接只是修改连接池带的元素状态 没有的话会异步添加连接 
