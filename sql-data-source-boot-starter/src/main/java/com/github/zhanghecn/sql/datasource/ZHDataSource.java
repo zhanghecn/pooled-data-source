@@ -26,9 +26,11 @@ public class ZHDataSource extends SQLDataSourceConfig implements DataSourceAdapt
     @Override
     public Connection getConnectionObject() throws SQLException {
         try {
-            synchronized (this) {
-                if (connectionPool == null) {
-                    createDefaultConnectionPool();
+            if (connectionPool == null) {
+                synchronized (this) {
+                    if (connectionPool == null) {
+                        createDefaultConnectionPool();
+                    }
                 }
             }
             return (Connection) connectionPool.getConnectionObject();

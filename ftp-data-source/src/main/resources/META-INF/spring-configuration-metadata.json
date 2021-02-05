@@ -1,0 +1,73 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.zh",
+      "type": "com.github.zhanghecn.ftp.datasource.ZHDataSource",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.datasource.zh.connection-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.hostname",
+      "type": "java.lang.String",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.idle-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.login-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.max-lifetime",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.max-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.min-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.password",
+      "type": "java.lang.String",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.pool-name",
+      "type": "java.lang.String",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.datasource.zh.username",
+      "type": "java.lang.String",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    },
+    {
+      "name": "spring.datasource.zh.validation-timeout",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.zhanghecn.ftp.datasource.ZHDataSource"
+    }
+  ],
+  "hints": []
+}
